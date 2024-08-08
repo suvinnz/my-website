@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'InfinitySans-CondBoldA1';
+    src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Wemade/InfinitySans-CondBoldA1.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+  @font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Wemade/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+*{
+  margin: 0; 
+  padding: 0; 
+  font-family: 'InfinitySans-RegularA1'; 
+  /*background-color: #f9f9f9;*/
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+/*
+body{
+    cursor: none;
+}
+    */
+  .cursor-out{
+    width: 3.6rem;
+    height: 3.6rem;
+    background: radial-gradient(circle, #111111, rgba(238, 238, 238, 0));
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: opacity 0.3s ease; 
+  }
+  .cursor-in{
+    width: 4rem;
+    height: 4rem;
+    border: solid 1px rgba(29, 29, 29, 1);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cursor-out.enlarged,
+  .cursor-in.enlarged {
+    transform: scale(1.4);
+  }
+  
+  .cursor-in.hide {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+
+
+
+/*----------about----------*/
+#wrap{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #DBDBDB;
+    background-color: #f9f9f9;
+    z-index: 1000;
+}
+#header a{
+    font-size: 14px;
+    color: #999999;
+}
+
+
+/*----------title----------*/
+#wrap .title{
+    padding: 70px;
+    box-sizing: border-box;
+}
+#wrap .title h1{
+    /*font-size: 52px;*/
+    font-family: 'InfinitySans-CondBoldA1'; 
+    letter-spacing: -4%;
+    color: #111111;
+
+    font-size: 200px;
+    margin-left: -10px;
+    margin-top: -20px;
+    box-sizing: border-box;
+}
+
+#wrap .title .menu{
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+#wrap .title .menu ul{
+    display: flex;
+}
+#wrap .title .menu li{
+    margin-right: 8px;
+}
+#wrap .title .menu li a{
+    font-size: 16px;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #999999;
+}
+#wrap .title .menu li a:hover{
+    background-color:#9999994c;
+    color: #111111;
+    border-radius: 4px;
+}
+
+
+
+/*----------contents----------*/
+#wrap .contents{
+    margin: 0 auto;
+    width: calc(100% - 140px);
+    margin-top: -40px;
+    padding-bottom: 400px;
+    box-sizing: border-box;
+}
+#wrap .contents .content{
+    border-top: solid 0.5px #999999;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+#wrap .contents .content:hover{
+    background-color: rgba(50, 50, 50, 0.1);
+    cursor: url('../image/click.png'), auto;
+}
+
+#wrap .contents .content img{
+    width: 50%;
+    object-fit: cover;
+}
+#wrap .contents .content .text{
+    position: absolute;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    bottom: 24px;
+    right: 0;
+    box-sizing: border-box;
+}
+#wrap .contents .content .text .title{
+    color: #111111;
+    font-size: 1rem;
+    font-family: 'Pretendard-Regular';
+    padding: 2px;
+}
+#wrap .contents .content .text .sub{
+    color: #777777;
+    font-size: 1rem;
+    font-family: 'Pretendard-Regular';
+    padding: 2px;
+}
+
+
+
+
+/*----------footer----------*/
+#footer{
+    position: absolute;
+    width: 100%;
+    background-color: #EEEEEE;
+    padding: 40px;
+    box-sizing: border-box;
+    bottom: 0;
+}
+#footer p{
+    position: absolute;
+    background-color: #EEEEEE;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+
+
+/*----------floating-icon----------*/
+.floating-icon-container {
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+.floating-icon {
+    width: 40px;
+    height: 40px;
+    animation: floatUpDown 2s infinite cubic-bezier(0.5, 1.6, 0.4, 0.9);
+}
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
