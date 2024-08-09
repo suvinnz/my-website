@@ -104,7 +104,9 @@ body{
 
 /*----------title----------*/
 #wrap .title{
-    padding: 70px;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
     box-sizing: border-box;
 }
 #wrap .title h1{
@@ -120,7 +122,7 @@ body{
 }
 
 #wrap .title .menu{
-    margin-top: 40px;
+    margin-top: 140px;
     box-sizing: border-box;
 }
 #wrap .title .menu ul{
@@ -129,14 +131,20 @@ body{
 #wrap .title .menu li{
     margin-right: 8px;
 }
+#wrap .title .menu .now{
+    color: #111111;
+    font-weight: 600;   
+}
+#wrap .title .menu .now:hover{
+    background-color: #f9f9f9;
+}
 #wrap .title .menu li a{
-    font-size: 16px;
-    padding: 8px;
+    font-size: 1.2rem;
+    padding: 10px;
     box-sizing: border-box;
-    color: #999999;
+    color: #b2b2b2;
 }
 #wrap .title .menu li a:hover{
-    background-color:#9999994c;
     color: #111111;
     border-radius: 4px;
 }
@@ -144,13 +152,63 @@ body{
 
 
 /*----------contents----------*/
-#wrap .contents{
+
+#wrap .grid{
     margin: 0 auto;
-    width: calc(100% - 140px);
-    margin-top: -40px;
+    padding-top: 24px;
+    padding-left: 70px;
+    padding-right: 70px;
     padding-bottom: 400px;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
+#wrap .grid .grid-item{
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+#wrap .grid .grid-item img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+}
+#wrap .grid .grid-item .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.1);
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wrap .grid .grid-item .overlay .overlay-text{
+    background-color: rgba(249, 249, 249, 0.8);
+    color: #111111;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+}
+
+#wrap .grid .grid-item:hover img{
+    transform: scale(1.05);
+}
+#wrap .grid .grid-item:hover .overlay{
+    opacity: 1;
+}
+
+/*
 #wrap .contents .content{
     border-top: solid 0.5px #999999;
     padding-top: 24px;
@@ -190,7 +248,7 @@ body{
     font-family: 'Pretendard-Regular';
     padding: 2px;
 }
-
+*/
 
 
 
@@ -199,7 +257,7 @@ body{
     position: absolute;
     width: 100%;
     background-color: #EEEEEE;
-    padding: 40px;
+    padding: 30px;
     box-sizing: border-box;
     bottom: 0;
 }
