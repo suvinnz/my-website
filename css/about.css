@@ -100,6 +100,8 @@ h1{
     bottom: 0;
 }
 #footer p{
+    width: 100%;
+    text-align: center;
     position: absolute;
     background-color: #333333;
     top: 50%;
