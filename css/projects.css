@@ -7,7 +7,7 @@
     font-weight: 600;
     font-style: normal;
 }
-  @font-face {
+@font-face {
     font-family: 'InfinitySans-RegularA1';
     src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Wemade/InfinitySans-RegularA1.woff') format('woff');
     font-weight: 400;
@@ -168,6 +168,17 @@ li{
 }
 
 @media (max-width: 700px){
+    #wrap .title{
+        padding-left: 35px;
+        padding-right: 35px;
+        box-sizing: border-box;
+    }
+    #wrap .grid{
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 200px;
+    }
+
     #wrap .title h1{
         font-size: 6rem;
         margin-top: 0;
