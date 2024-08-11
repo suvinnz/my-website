@@ -136,6 +136,9 @@ body{
   #main {
     padding: 20px;
   }
+  #main .title{
+    padding-bottom: 200px;
+  }
   #main .title .first{
     font-size: 4rem;
   }
