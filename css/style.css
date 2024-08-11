@@ -148,6 +148,7 @@ body{
 
   #main .menu{
     width: calc(100% - 40px);
+    bottom: 20px;
   }
   #main .menu .text{
     display: flex;
