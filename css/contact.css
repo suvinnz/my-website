@@ -45,6 +45,8 @@ li{
 }
 
 #header {
+  position: fixed;
+  z-index: 998;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -60,7 +62,8 @@ li{
 
 h1{
     position: absolute;
-    font-size: 260px;
+    z-index: 997;
+    font-size: 16.25rem;
     font-family: 'InfinitySans-CondBoldA1'; 
     letter-spacing: -4%;
     color: #eeeeee;
@@ -71,7 +74,9 @@ h1{
 }
 
 #main .content {
+    width: 100%;
     position: absolute;
+    z-index: 999;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -40%);
@@ -89,6 +94,7 @@ h1{
 
 #footer{
     position: absolute;
+    z-index: 1000;
     width: 100%;
     background-color: #333333;
     padding: 30px;
@@ -104,7 +110,50 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
     color: #555555;
-    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+
+
+@media (max-width: 700px){
+  #main{
+    overflow: auto;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  h1{
+    padding-top: 70px;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    font-size: 4rem;
+    margin-left: 0;
+    top: 0;
+    bottom: auto;
+  }
+
+  #main .content {
+    padding-top: 210px;
+    padding-bottom: 200px;
+    box-sizing: border-box;
+
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+
+    flex: 1;
+  }
+
+  /*footer*/
+  #footer{
+    padding: 20px;
+  }
+  #footer p{
+    font-size: 0.75rem;
+  }
+
 }
 
 

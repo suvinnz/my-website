@@ -74,14 +74,16 @@ li{
 #main .text{
     width: 20%;
     position: fixed;
-    overflow-y: auto;
 }
 #main .text h1{
+    width: 100%;
     font-size: 6.25rem;
+
     margin-left: -4px;
     margin-top: -28px;
     font-family: 'InfinitySans-CondBoldA1'; 
     color: #111111;
+    letter-spacing: -4%;
 }
 #main .text .menu{
     width: 100%;
@@ -91,13 +93,14 @@ li{
     flex-direction: column;
 }
 #main .text .menu .title{
+    width: 100%;
     color: #111111;
     font-size: 1rem;
     font-family: 'Pretendard-Regular';
     font-weight: 800;
-    padding: 2px;
 }
 #main .text .menu .sub{
+    width: 100%;
     color: #777777;
     font-size: 1rem;
     font-family: 'Pretendard-Regular';
@@ -106,6 +109,7 @@ li{
 }
 /*----------content----------*/
 #main .content{
+    width: 80%;
     flex-grow: 1;
     margin-left: 24%;
 }
@@ -115,36 +119,6 @@ li{
     box-sizing: border-box;
 }
 
-
-
-@media (max-width: 700px){
-    #main{
-        display: block;
-        padding-left: 20px;
-        padding-right: 20px;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 200px;
-    }
-    #main .text{
-        width: 100%;
-        overflow-y: hidden;
-        padding-bottom: 20px;
-        position: static;
-        margin-top: -70px;
-    }
-    #main .text h1{
-        font-size: 4rem;
-        margin-top: 0;
-    }
-
-    #main .content{
-        width: 100%;
-        flex-grow: 0;
-        margin-left: 0;
-        margin-top: 12px;
-    }
-}
 
 
 /*----------footer----------*/
@@ -165,5 +139,49 @@ li{
     transform: translate(-50%, -50%);
     background-color: #EEEEEE;
     color: #bbbbbb;
-    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+
+
+@media (max-width: 700px){
+    #main{
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 200px;
+    }
+    #main .text{
+        width: 100%;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+        position: static;
+        margin-top: -70px;
+        z-index: 99;
+    }
+    #main .text h1{
+        font-size: 4rem;
+        margin-top: 0;
+    }
+
+    #main .content{
+        width: 100%;
+        flex-grow: 0;
+        margin-left: 0;
+        margin-top: 12px;
+        z-index: 9;
+    }
+    #main .content img{
+        padding-bottom: 12px;
+    }
+
+    
+    #footer{
+        padding: 20px;
+    }
+    #footer p{
+        font-size: 0.75rem;
+    }
 }
