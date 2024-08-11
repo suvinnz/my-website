@@ -134,17 +134,18 @@ body{
 @media (max-width: 700px){
 
   #main {
-    padding: 40px;
+    padding: 20px;
   }
   #main .title .first{
-    font-size: 5rem;
+    font-size: 4rem;
   }
   #main .title .second{
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   #main .menu{
-    width: calc(100% - 80px);
+    width: calc(100% - 40px);
+    bottom: 20px;
   }
   #main .menu .text{
     display: flex;
