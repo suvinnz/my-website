@@ -115,7 +115,7 @@ body{
 }
 #main .menu .text a{
   color: #eeeeee;
-  font-size: 30px;
+  font-size: 1.875rem;
   padding-top: 32px ;
   padding-bottom: 32px ;
   padding-left: 64px;
@@ -128,3 +128,32 @@ body{
   cursor: url('../image/click.png'), auto;
 }
 
+
+
+
+@media (max-width: 700px){
+
+  #main {
+    padding: 40px;
+  }
+  #main .title .first{
+    font-size: 5rem;
+  }
+  #main .title .second{
+    font-size: 5rem;
+  }
+
+  #main .menu{
+    width: calc(100% - 80px);
+  }
+  #main .menu .text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  #main .menu .text a{
+    font-size: 1rem;
+  }
+
+}
