@@ -2,7 +2,8 @@ $(function(){
 
   //floating arrow
   $(window).on('scroll', function() {
-    const floatingIcon = $('#floatingIcon');
+    const floatingIconDown = $('#floatingIconDown');
+    const floatingIconUp = $('#floatingIconUp');
     console.log('Current scroll position:', $(window).scrollTop());
 
     const documentHeight = $(document).height();
@@ -11,9 +12,11 @@ $(function(){
     console.log('Current Scroll:', currentScroll, 'Document Height:', documentHeight);
 
     if (currentScroll >= documentHeight - 1) {
-        floatingIcon.attr('src', '../image/up.svg');
+      floatingIconDown.hide();
+      floatingIconUp.show();
     } else {
-        floatingIcon.attr('src', '../image/down.svg');
+      floatingIconDown.show();
+      floatingIconUp.hide();
     }
   });
 
