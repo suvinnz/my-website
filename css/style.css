@@ -130,6 +130,7 @@ body{
   padding-right: 64px;
   box-sizing: border-box;
   border-radius: 12px;
+  transition: background-color 0.3s ease;
 }
 #main .menu .text a:hover{
   background-color: rgba(238, 238, 238, 0.1);
