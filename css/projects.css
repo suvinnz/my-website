@@ -223,6 +223,14 @@ li{
     }
 }
 
+@media (max-width: 940px){
+    /*grid*/
+    #wrap .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
 /*----------under width 700----------*/
 @media (max-width: 700px){
     #wrap .title{
