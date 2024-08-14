@@ -65,7 +65,7 @@ h1{
   position: absolute;
   z-index: 997;
   font-size: 16.25rem;
-  font-family: 'InfinitySans-CondBoldA1'; 
+  font-family: 'InfinitySans-CondBoldA1';
   letter-spacing: -4%;
   color: #eeeeee;
   background-color: rgba(0, 0, 0, 0);
@@ -87,14 +87,23 @@ h1{
 }
 
 #main .content p{
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
-  line-height: 160%;
+  line-height: 140%;
   color: #dfdfdf;
   font-family: 'Pretendard-Regular';
   font-weight: lighter;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
+
+#main .content .no-break{
+  font-size: 1rem;
+  text-align: center;
+  line-height: 140%;
+  color: #dfdfdf;
+  font-family: 'Pretendard-Regular';
+  font-weight: lighter;
 }
 
 
@@ -152,6 +161,10 @@ h1{
     transform: none;
 
     flex: 1;
+  }
+
+  #main .content .no-break{
+    white-space: nowrap;
   }
 
   /*footer*/
