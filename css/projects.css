@@ -25,7 +25,7 @@
   margin: 0; 
   padding: 0; 
   font-family: 'InfinitySans-RegularA1'; 
-  /*background-color: #f9f9f9;*/
+  background-color: #f9f9f9;
 }
 
 a{
@@ -197,11 +197,13 @@ li{
     left: 50%;
     bottom: 50px;
     transform: translateX(-50%);
+    background-color: transparent;
 }
 .floating-icon {
     width: 52px;
     height: 52px;
     animation: floatUpDown 2s infinite cubic-bezier(0.5, 1.6, 0.4, 0.9);
+    background-color: transparent;
 }
 @keyframes floatUpDown {
     0%, 100% {
@@ -213,6 +215,13 @@ li{
 }
 
 
+@media (max-width: 1360px){
+    /*grid*/
+    #wrap .grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
 
 /*----------under width 700----------*/
 @media (max-width: 700px){
