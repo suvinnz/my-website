@@ -119,6 +119,14 @@ li{
     font-weight: 400;
     padding-top: 12px;
 }
+#main .text .menu .link{
+    width: 100%;
+    color: #777777;
+    font-size: 1rem;
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    text-decoration: underline;
+}
 /*----------content----------*/
 #main .content{
     width: 80%;
