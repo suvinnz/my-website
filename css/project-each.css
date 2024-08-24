@@ -65,7 +65,7 @@ li{
 /*----------main----------*/
 #main{
     display: flex;
-    padding: 60px;
+    padding: 20px;
     margin-top: 60px;
     padding-bottom: 400px;
     box-sizing: border-box;
@@ -109,7 +109,7 @@ li{
 #main .text .menu .title{
     width: 100%;
     color: #111111;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Pretendard-Regular';
     font-weight: 800;
 }
@@ -167,9 +167,9 @@ li{
 }
 
 
-@media (max-width: 1156px){
+@media (max-width: 1046px){
     #main .text h2{
-        font-size: 3.4vw;
+        font-size: 3.65vw;
     }
 }
 
