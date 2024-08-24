@@ -79,6 +79,7 @@ body{
   padding: 70px;
   box-sizing: border-box;
   background-color: transparent;
+  overflow: hidden;
 }
 
 #main .title{
@@ -89,7 +90,7 @@ body{
 #main .title .first{
   color: #eeeeee; 
   background-color: transparent;
-  font-size: 200px;
+  font-size: 12vw;
   letter-spacing: -4%;
   font-family: 'InfinitySans-CondBoldA1'; 
   text-align: left;
@@ -100,11 +101,10 @@ body{
 #main .title .second{
   color: #eeeeee; 
   background-color: transparent;
-  font-size: 200px;
+  font-size: 12vw;
   letter-spacing: -4%;
   font-family: 'InfinitySans-CondBoldA1'; 
   text-align: right;
-  
 }
 
 #main .menu{
@@ -120,23 +120,21 @@ body{
   display: flex;
   justify-content: space-between;
   background-color: transparent;
+  text-align: center;
 }
 #main .menu .text a{
   color: #eeeeee;
   font-size: 1.875rem;
-  padding-top: 32px ;
-  padding-bottom: 32px ;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 52px;
+  padding-right: 52px;
   box-sizing: border-box;
   border-radius: 12px;
   transition: background-color 0.3s ease;
 }
 #main .menu .text a:hover{
   background-color: rgba(238, 238, 238, 0.1);
-  /*
-  cursor: url('../image/click.png'), auto;
-  */
 }
 
 
