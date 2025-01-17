@@ -123,6 +123,7 @@ h1{
   }
 
   h1{
+    /*
     padding-top: 70px;
     padding-left: 20px;
     box-sizing: border-box;
@@ -131,6 +132,8 @@ h1{
     margin-left: 0;
     top: 0;
     bottom: auto;
+    */
+    display: none;
   }
 
   #main .content {

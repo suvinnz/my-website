@@ -24,7 +24,7 @@
   margin: 0; 
   padding: 0; 
   font-family: 'InfinitySans-RegularA1'; 
-  background-color: #111111;
+  /*background-color: #111111;*/
 }
 
 a{
@@ -34,17 +34,23 @@ li{
   list-style: none;
 }
 
-/*----------about----------*/
-#main{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+
+#wrap{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  padding-top: 240px;
+  padding-bottom: 480px;
+  box-sizing: border-box;
+  background-color: #111111;
 }
 
 /*----------header----------*/
 #header {
     position: fixed;
+    top: 0;
     z-index: 998;
     width: 100%;
     background-color: #111111;
@@ -60,30 +66,17 @@ li{
     color: #999999;
 }
 
-/*----------main----------*/
-h1{
-  position: absolute;
-  z-index: 997;
-  font-size: 16.25rem;
-  font-family: 'InfinitySans-CondBoldA1';
-  letter-spacing: -4%;
-  color: #eeeeee;
-  background-color: rgba(0, 0, 0, 0);
-  margin-left: -32px;
-  bottom: -26px;
+/*----------menu----------*/
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   box-sizing: border-box;
 }
 
 #main .content {
   width: 100%;
-  position: absolute;
-  z-index: 999;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
-  background-color: rgba(0, 0, 0, 0);
-  padding: 20px;
-  box-sizing: border-box;
+  margin-bottom: 160px;
 }
 
 #main .content .ko{
@@ -94,7 +87,7 @@ h1{
   font-family: 'Pretendard-Regular';
   font-weight: lighter;
   padding-top: 32px;
-  padding-bottom: 22px;
+  padding-bottom: 12px;
 }
 #main .content .en{
   font-size: 1rem;
@@ -104,7 +97,7 @@ h1{
   font-family: 'Pretendard-Regular';
   font-weight: lighter;
   padding-top: 32px;
-  padding-bottom: 22px;
+  padding-bottom: 12px;
 }
 
 #main .content .no-break-ko{
@@ -124,17 +117,82 @@ h1{
   font-weight: lighter;
 }
 
+#main .discribe{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ffffff07;
+}
+#main .discribe p{
+  font-size: 1rem;
+  text-align: center;
+  line-height: 136%;
+  color: #dfdfdf;
+  font-family: 'Pretendard-Regular';
+  font-weight: lighter;
+}
+#main .discribe .en{
+  font-size: 1rem;
+  text-align: center;
+  line-height: 136%;
+  color: #dfdfdf;
+  font-family: 'InfinitySans-RegularA1'; 
+}
 
-#footer{
+#main .discribe .image{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+#main .discribe .image .set{
+  margin: 2px;
+  box-sizing: border-box;
+}
+#main .discribe .image .set .stext{
+  font-size: 0.75rem;
+  color: #999999;
+}
+#main .discribe .image .set img{
+  width: 100%;
+}
+#main .discribe .notion{
+  color: #666666;
+}
+
+#title{
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  overflow: hidden;
+}
+#title .text{
+  width: 100%;
+  /*z-index: 997;*/
+  font-size: 16.25rem;
+  font-family: 'InfinitySans-CondBoldA1';
+  letter-spacing: -4%;
+  color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: -32px;
+  margin-bottom: -26px;
+  box-sizing: border-box;
+}
+#title .footer{
     position: absolute;
-    z-index: 1000;
+    /*z-index: 1000;*/
     width: 100%;
     background-color: #333333;
     padding: 30px;
     box-sizing: border-box;
     bottom: 0;
 }
-#footer p{
+#title .footer p{
     width: 100%;
     text-align: center;
     position: absolute;
@@ -150,45 +208,54 @@ h1{
 
 
 @media (max-width: 700px){
-  #main{
-    overflow: auto;
-    height: 100%;
-    min-height: 100vh;
+
+  #wrap{
+    padding-bottom: 280px;
   }
-
-  h1{
-    padding-top: 70px;
-    padding-left: 20px;
-    box-sizing: border-box;
-
-    font-size: 4rem;
-    margin-left: 0;
-    top: 0;
-    bottom: auto;
+  
+  #main .content{
+    padding: 20px;
   }
-
-  #main .content {
-    padding-top: 210px;
-    padding-bottom: 200px;
-    box-sizing: border-box;
-
-    position: static;
-    left: auto;
-    top: auto;
-    transform: none;
-
-    flex: 1;
-  }
-
   #main .content .no-break{
     white-space: nowrap;
   }
 
-  /*footer*/
-  #footer{
+  #main .discribe{
     padding: 20px;
   }
-  #footer p{
+
+  #main .discribe .image{
+    width: 100%;
+    
+  }
+
+  #main .discribe .image{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  #main .discribe .image .set{
+    width: 48%;
+    margin: 2px;
+    box-sizing: border-box;
+  }
+
+  #title {
+    overflow:visible;
+  }
+
+  #title .text{
+  display: none;
+  }
+
+  /*footer*/
+  #title .footer{
+    padding: 20px;
+  }
+  #title .footer p{
     font-size: 0.75rem;
   }
 
